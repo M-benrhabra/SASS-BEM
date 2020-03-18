@@ -1,9 +1,15 @@
 $firstColor:#4448EC;
 $scendColor:#1A1B4C;
 $therdColor:#000;
+$cColor:#eb202d;
 
 *{
+    box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-
+    text-decoration: none;
+    list-style-type: none;
+}
+body{
+    font-family: Roboto, Helvetica, Arial, sans-serif;
 }
