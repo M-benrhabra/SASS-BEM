@@ -1,69 +1,100 @@
-.navbar{
-  height: 80px;
-  width: 100%;
+*{
+    list-style-type: none;
+    text-decoration: none;
 }
-.navbar .logo{
-  padding: 0 50px;
-  line-height: 80px;
-}
-.navbar ul {
-  float: right;
-  margin-right: 40px;
-}
-.navbar ul li {
-  display: inline-block;
-  margin: 0 10px;
-  line-height: 80px;
-}
-.navbar ul li a {
-  color:$therdColor;
-}
-.navbar ul li a:hover{
-  color: $cColor;
+$a:#ffffff;
 
-}
-.checkbtn{
-  font-size: 30px;
-  color: $therdColor;
-  float: right;
-  line-height: 80px;
-  margin-right: 40px;
-  cursor: pointer;
-  display: none;
-}
-#check{
-  display: none;
-}
-@media (max-width:992px){
-  .checkbtn{
-    display: block;
-  }
-  .navbar{
-    background: rgba($color: #231e75, $alpha: 0.5);
-  }
-  .navbar ul{
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: rgba($color: #231e75, $alpha: 0.5);
-    top: 80px;
-    left: -100%;
-    text-align: center;
-    transition: all .5s;
-  }
-  .navbar ul li{
-    display: block;
-    margin: 20px 60px;
-    border-bottom: 1px solid #fff; 
-    line-height: 80px;
-  }
-  .navbar ul li a{
-    font-size: 20px;
-  }
-  .navbar ul li a:hover{
-    color: $therdColor;
-  }
-  #check:checked ~ ul{
-    left: 0;
-  }
-}
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    overflow-x: hidden;
+
+    
+
+
+.navbar{
+    display: flex;
+    margin-top: 2vw;
+
+    .navbar__logo{
+        margin-left: 6vw;
+        
+    }
+    .navbar__Menu-mobile{
+        line-height: 50px;
+        font-size: 24px;
+        cursor: pointer;
+        display: none;
+        @media (max-width:600px) {
+            display: block;
+            margin-left: auto;
+            margin-top: -10px;
+            padding-right: 10px;
+           }
+    }
+
+   
+    nav{
+        margin-left: 26vw;
+        margin-top: 0px;
+        @media (max-width:600px) {
+         display: none;
+         position: absolute;
+         width: 100%;
+         height: 50vh;
+         background-color: rgba($color: #2f354f, $alpha: 0.9);
+         top: 40px;
+         left: +100%;
+         transition: 0.5s;
+         margin: 0;
+         z-index: 20;
+
+        }
+       
+
+        ul{
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+            width: 100%; 
+            @media (max-width:600px) {
+                display: block;
+                text-align: center;
+                padding: 0;
+                } 
+            } 
+            
+             li{
+                 position: relative;
+                 padding: 15px 0;
+                  :hover {
+                    padding: 1vw 1.2vw;
+                    border: 1px solid;
+                    border-radius: 5px;
+                    color:white;  
+                    background: red;
+                   }
+                    a {
+                         text-decoration: none;
+                         padding: 4vw 1.2vw;
+                         font-size: 1.3vw;
+                         color: black;
+                         @media (max-width:600px) {
+                         color: #ffffff; 
+                         font-size: 20px;
+ 
+                         }
+                    }
+                } 
+         }      
+     }
+     nav.active {
+        left: 0;
+        display: block;
+    }
+ }

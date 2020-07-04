@@ -1,0 +1,19 @@
+.section5{
+    margin-top: 10%;
+    text-align: center;
+    width: 100%;
+    p{
+        color: $fontColor;
+    }
+    .section__features{
+        width: 30%;
+        margin: auto;
+    }
+}
+@media (max-width:900px){
+    .section5{
+        .section__features{
+            width: 80%;
+        }
+    }
+}

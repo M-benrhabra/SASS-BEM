@@ -1,0 +1,21 @@
+.section4{
+    text-align: center;
+    width: 100%;
+    .section4__features{
+        width:  30%;
+        margin: auto;
+    }
+    .section4__features p{
+        color: rgba($color: #000000, $alpha: .4);
+    }
+
+}
+@media (max-width: 900px){
+    .section4{
+        margin-top: 20px;
+        .section4__features{
+            width:  80%;
+        }
+    }
+
+}

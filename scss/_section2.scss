@@ -1,0 +1,26 @@
+.section2{
+    text-align: center;
+    width: 100%;
+    .section2__features{
+        width: 50%;
+        padding: 20px 0;
+        margin: auto;
+        p{
+            color: $fontColor;
+        }
+    }
+}
+@media (max-width:1260px){
+    .section2{
+
+        .section2__features{
+            width: 60%;
+            margin: auto;
+        }
+    }
+}
+@media (max-width:700px){
+    .section2{
+        margin-top: 20px;
+    }
+}
